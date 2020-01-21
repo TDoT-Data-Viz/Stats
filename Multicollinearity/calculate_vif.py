@@ -6,9 +6,9 @@ import pandas as pd
 def generate_vif(csv):
     """Prints the Variance Inflation Factor (VIF) for the values in a given csv."""
     # Create pandas dataframe from csv.
-    data = pd.read_csv(csv, header=0)
+    data = pd.read_csv(csv)
     # Calculate VIF from dataframe.
     cc = sp.corrcoef(data.values, rowvar=False)
     vif = np.linalg.inv(cc)
     v = vif.diagonal()
-    print(v)
+    return str(v)
