@@ -4,7 +4,7 @@ import pandas as pd
 
 # Read csv as pandas dataframe
 def generate_vif(csv):
-    '''Prints the Variance Inflation Factor (VIF) for the values in a given csv.'''
+    """Prints the Variance Inflation Factor (VIF) for the values in a given csv."""
     # Create pandas dataframe from csv.
     data = pd.read_csv(csv, header=0)
     # Calculate VIF from dataframe.
